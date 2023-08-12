@@ -12,17 +12,9 @@ class Exercise5_10 {
         for(int i=0; i < src.length();i++) {
             char ch = src.charAt(i);
             if(ch >= '0' && ch <= '9'){
-                for(int j=0;j < numCode.length;i++){
-                    if(ch == numCode[j]){
-                        result += numCode[j];
-                    }
-                }
+                result += numCode[ch-'0'];
             }else {
-                for(int k =0;k<abcCode.length;k++){
-                    if(ch ==abcCode[k]){
-                        result+= abcCode[k];
-                    }
-                }
+                result += abcCode[ch-'a'];
             }
         }
 

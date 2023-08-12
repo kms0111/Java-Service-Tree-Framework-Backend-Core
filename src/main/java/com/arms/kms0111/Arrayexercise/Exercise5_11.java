@@ -13,12 +13,20 @@ class Exercise5_11
         };
         int[][] result = new int[score.length+1][score[0].length+1];
 
+
         for(int i=0; i < score.length;i++) {
             for(int j=0; j < score[i].length;j++) {
                 result[i][j] = score[i][j];
                 result[i][result[i].length-1] += score[i][j];
             }
         }
+
+        for(int i =0;i<4;i++){
+            for(int k=0;k<5;k++){
+                result[result.length-1][i]+=result[k][i];
+            }
+        }
+
 
         for(int i=0; i < result.length;i++) {
             for(int j=0; j < result[i].length;j++) {
